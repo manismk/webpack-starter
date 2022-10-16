@@ -10,4 +10,13 @@ module.exports = {
       template: "src/template.html",
     }),
   ],
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3001,
+    hot: true,
+    open: true,
+  },
 };
