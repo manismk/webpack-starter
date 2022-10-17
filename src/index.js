@@ -1,4 +1,5 @@
-import { App } from "./App.jsx";
+import { App } from "./App.js";
+import "./index.css";
 
 let num = 0;
 const root = document.getElementById("root");

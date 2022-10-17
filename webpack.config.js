@@ -14,17 +14,12 @@ module.exports = {
       template: "src/template.html",
     }),
   ],
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-    },
-    compress: true,
-    port: 3001,
-    hot: true,
-    open: true,
-  },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -36,5 +31,14 @@ module.exports = {
         },
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000,
+    hot: true,
+    open: true,
   },
 };
