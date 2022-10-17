@@ -32,6 +32,13 @@ body {
 
 h1 {
   font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  width: 24px;
 }
 
 #count {
